@@ -14,6 +14,9 @@ function InputGroup(props) {
                 onClick={() => props.addTask()}
                 disabled={!props.inputText}
                 >add</button>
+                <button
+                    onClick={() => props.cleanTask()}
+                >clean</button>
             </div>
     )
 }

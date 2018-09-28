@@ -5,7 +5,6 @@ import Header from './Header';
 import List from './List';
 import InputGroup from './InputGroup';
 
-
 class App extends Component {
     constructor(props) {
         super(props);
@@ -31,6 +30,10 @@ class App extends Component {
         });
     };
 
+    cleanTask = () => {
+        this.setState({list:[]})
+    };
+
 
   render() {
       console.log (this.state);
@@ -41,6 +44,7 @@ class App extends Component {
             changeInput={this.changeInput}
             addTask={this.addTask}
             inputText={this.state.inputText}
+            cleanTask={this.cleanTask}
             />
             <List list={this.state.list}/>
         </div>
