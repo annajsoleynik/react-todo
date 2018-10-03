@@ -35,6 +35,11 @@ class App extends Component {
         this.setState({list:[]})
     };
 
+    makeDone = id => {
+        this.setState({
+            list: this.state.list.map(e => e.id === id ? ({...e, done: ! e.done}) : e)
+        })
+    };
 
   render() {
       console.log (this.state);
@@ -47,7 +52,10 @@ class App extends Component {
             inputText={this.state.inputText}
             cleanTask={this.cleanTask}
             />
-            <List list={this.state.list}/>
+            <List
+                list={this.state.list}
+                makeDone={this.makeDone}
+            />
         </div>
     );
   }
