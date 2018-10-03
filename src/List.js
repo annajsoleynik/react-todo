@@ -1,12 +1,13 @@
 import React from 'react';
-import './App.css';
 import  ListItem from './ListItem';
 
 
 function List(props) {
-    return (
-        props.list.map(item => <ListItem item={item}/> )
-    );
+  return (
+    <div className='list-group'>
+      {props.list.map(item => <ListItem item={item}/> )}
+    </div>
+  );
 }
 
 export default List;

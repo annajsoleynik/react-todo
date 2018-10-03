@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import uniqid from 'uniqid';
-import './App.css';
+import './index.css';
 import Header from './Header';
 import List from './List';
 import InputGroup from './InputGroup';
+
 
 class App extends Component {
     constructor(props) {
@@ -38,7 +39,7 @@ class App extends Component {
   render() {
       console.log (this.state);
     return (
-        <div>
+        <div className='container'>
             <Header/>
             <InputGroup
             changeInput={this.changeInput}
